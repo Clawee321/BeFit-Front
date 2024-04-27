@@ -1,9 +1,19 @@
-import React from 'react'
+import { ImageParamsResult } from 'next/dist/server/image-optimizer';
+import React from 'react';
 
-const Article = () => {
-  return (
-    <div>Article</div>
-  )
+// Definicja interfejsu dla propsów
+interface ArticleProps {
+  title: string;
+  content: string;
 }
 
-export default Article
+const Article: React.FC<ArticleProps> = ({ title, content }) => {
+    return (
+        <article>
+            <h1>{title}</h1>
+            <div>{content}</div>
+        </article>
+    );
+};
+
+export default Article;
