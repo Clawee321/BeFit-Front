@@ -1,16 +1,16 @@
 import Image from "next/image";
 import Link from "next/link";
-import runPicture from "@/assets/run.jpeg";
+import runPicture from "@/assets/main/run.jpeg";
 import logo from "@/assets/logo.png";
-import heart from "@/assets/heart.png";
-import calc from "@/assets/calc.png";
-import dumbbell from "@/assets/dumbbell.jpg";
-import food from "@/assets/food.png";
-import carbonara from "@/assets/carbonara.jpg";
-import szoty from "@/assets/szoty.jpg";
-import gofry from "@/assets/gofry.jpg";
-import dance from "@/assets/dance.jpg";
-import yoga from "@/assets/yoga.jpg";
+import heart from "@/assets/main/heart.png";
+import calc from "@/assets/main/calc.png";
+import dumbbell from "@/assets/main/dumbbell.jpg";
+import food from "@/assets/main/food.png";
+import carbonara from "@/assets/main/carbonara.jpg";
+import szoty from "@/assets/main/szoty.jpg";
+import gofry from "@/assets/main/gofry.jpg";
+import dance from "@/assets/main/dance.jpg";
+import yoga from "@/assets/main/yoga.jpg";
 
 export default function Home() {
   return (
@@ -105,7 +105,7 @@ export default function Home() {
         <Link href="/przepisy"> <div className="bg-white h-80 w-72 shadow-lg" style={{ boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.1)" }}>
         <div className="flex justify-center px-4 pt-8 pb-4">
             <Image src={szoty} alt="szoty witaminowe" width={550} height={400}/>
-          </div>
+          </div>  
           <h2 className="text-2xl font-medium px-4 font-abhaya">Zielone szoty witaminowe</h2>
           </div></Link>
         <Link href="/przepisy"> <div className="bg-white h-80 w-72 shadow-lg" style={{ boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.1)" }}>
