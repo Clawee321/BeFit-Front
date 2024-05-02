@@ -7,15 +7,21 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        'ziel1': '#C5D6CC',
+        'ziel2': '#20665C',
+      },
       fontFamily: {
         'abhaya': ['Abhaya Libre', 'serif'],
       }
+      
     },
   },
   plugins: [],
