@@ -60,7 +60,12 @@ export default function Przepisy() {
                   style={{ boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.1)" }}
                 >
                   <div className="flex justify-center px-4 pt-4 pb-4">
-                    <Image src={gofry} alt="A" width={900} height={650} />
+                    <Image
+                      src={`data:image/png;base64,${przepis.image}`}
+                      alt={przepis.nazwa}
+                      width={900}
+                      height={650}
+                    />
                   </div>
                   <h2 className="text-2xl font-medium px-4 font-abhaya">
                     {przepis.nazwa}

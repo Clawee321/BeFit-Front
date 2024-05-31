@@ -4,6 +4,7 @@ import { AxiosResponse } from "axios";
 export interface GetRecipeMainData {
   id: number;
   nazwa: string;
+  image: string;
 }
 
 export async function getRecipeMainDetails(): Promise<
