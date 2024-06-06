@@ -31,17 +31,16 @@ const RecipeForm = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    // const ingredientsArray: Ingredient[] = ingredients
-    //   .split(",")
-    //   .map((item) => ({
-    //     skladnik: item.trim(),
-    //   }));
-    const gowno: Ingredient = { skladnik: "aaa" };
+    const ingredientsArray: Ingredient[] = ingredients
+      .split(",")
+      .map((item) => ({
+        skladnik: item.trim(),
+      }));
     const recipeData: RecipeData = {
       nazwa: recipeName,
-      skladniki: [gowno, gowno],
+      skladniki: ingredientsArray,
       przygotowanie: instructions,
-      image: new File([], "zdjecie"),
+      image: selectedFile,
     };
 
     console.log("Wysłane dane:", recipeData);
