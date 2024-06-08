@@ -4,6 +4,8 @@ import React from "react";
 
 const page = () => {
   const onClickEventPrzepisy = () => (window.location.href = "/panel/przepisy");
+  const onClickEventCwiczenia = () =>
+    (window.location.href = "/panel/cwiczenia");
   return (
     <div className="flex flex-col items-center justify-center min-h-[70vh] bg-gray-100 text-ziel2">
       <div className="flex flex-col bg-white p-8 rounded-lg shadow-lg max-w-3xl w-full items-center justify-center">
@@ -17,7 +19,10 @@ const page = () => {
           >
             Przepisy
           </button>
-          <button className="bg-ziel2 hover:bg-ziel2/85 text-white  p-4 rounded-full">
+          <button
+            className="bg-ziel2 hover:bg-ziel2/85 text-white  p-4 rounded-full"
+            onClick={onClickEventCwiczenia}
+          >
             Ćwiczenia
           </button>
         </div>
