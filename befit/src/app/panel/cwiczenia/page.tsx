@@ -133,10 +133,10 @@ const ExerciseForm = () => {
                 <button
                   type="button"
                   key={category.value}
-                  className={`p-2 m-1 rounded-lg border-2 border-black  text-3xl transition-all ease-out duration-200 text-left ${
+                  className={`p-2 m-1 rounded-lg border-2 border-black  text-3xl transition-all ease-out duration-200 text-left hover:bg-gray-200 ${
                     selectedCategory === category.value
-                      ? "bg-ziel2 text-white"
-                      : "bg-gray-200"
+                      ? "bg-ziel2 text-white hover:bg-ziel2"
+                      : "bg-white"
                   }`}
                   onClick={() => setSelectedCategory(category.value)}
                 >
