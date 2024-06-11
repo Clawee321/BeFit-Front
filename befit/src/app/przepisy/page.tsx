@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import LoadingScene from "@/components/common/LoadingScene";
 
+import { useRouter } from "next/navigation";
 
 import { useQuery } from "react-query";
 import {
@@ -12,12 +13,17 @@ import {
 } from "@/app/hooks/recipemain";
 
 export default function Przepisy() {
+  const router = useRouter();
   const {
     data: recipeMainData,
     isLoading: recipeMainLoading,
     isError: recipeMainError,
   } = useQuery("recipemain", getRecipeMainDetails);
-  console.log("recipeMainData:", recipeMainData);
+
+  const handleRecipeClick = (id: number) => {
+    router.push(`/przepisy/${id}`);
+  };
+
   return (
     <div
       className="text-black"
@@ -36,10 +42,11 @@ export default function Przepisy() {
           recipeMainData ? (
             <>
               {recipeMainData.map((przepis, index) => (
-                <Link href={`/przepisy/przepis`} passHref key={index}>
+                <Link href={`/przepisy/${index + 1}`} passHref key={index}>
                 <div
                   key={index}
                   
+                  onClick={() => handleRecipeClick(index + 1)}
                   className="bg-white h-80 w-80 shadow-lg"
                   style={{ boxShadow: "4px 4px 8px rgba(0, 0, 0, 0.1)" }}
                 >
@@ -54,7 +61,6 @@ export default function Przepisy() {
                   <h2 className="text-2xl font-medium px-4 font-abhaya">
                     {przepis.nazwa}
                   </h2>
-                  
                 </div>
                 </Link>
               ))}

@@ -4,9 +4,9 @@ import { AxiosResponse } from "axios";
 export interface RecipeDetails {
   id: number;
   nazwa: string;
-  zdjecie_sciezka: string;
+  image: string;
   przygotowanie: string;
-  skladniki: { skladnik: string }[]; // Zakładamy, że składniki są obiektami z właściwością "nazwa"
+  skladniki: { skladnik: string }[];
 }
 
 export async function getRecipeDetailsById(id: number): Promise<RecipeDetails | string> {
