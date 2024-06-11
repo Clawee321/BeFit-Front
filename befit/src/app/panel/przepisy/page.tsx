@@ -20,6 +20,7 @@ const RecipeForm = () => {
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files && event.target.files[0];
     if (file) {
+      event.target.value = "";
       setSelectedFile(file);
     }
   };
