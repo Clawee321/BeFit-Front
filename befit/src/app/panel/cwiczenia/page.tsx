@@ -148,13 +148,13 @@ const ExerciseForm = () => {
               {error && error !== null && (
                 <p className="text-red-500 flex justify-center items-center text-xl font-bold gap-3">
                   <FiAlertCircle className="text-3xl" />
-                  Wystąpił problem z przesłaniem przepisu!
+                  Wystąpił problem z przesłaniem ćwiczenia!
                 </p>
               )}
               {success && (
                 <p className="text-ziel2 flex justify-center items-center text-xl font-bold gap-3">
                   <GrStatusGood className="text-3xl" />
-                  Przepis dodany pomyślnie!
+                  Ćwiczenie dodano pomyślnie!
                 </p>
               )}
               {loading && (
